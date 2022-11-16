@@ -1,0 +1,115 @@
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 20px;
+    height: 50px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.navDots {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.navDots img {
+    height: 20px;
+}
+
+.navDots:hover {
+    background-color: ghostwhite;
+}
+
+.profile {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.profile img {
+    height: 37.5px;
+    width: 37.5px;
+}
+
+.profile:hover {
+    background-color: ghostwhite;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    row-gap: 20px;
+}
+
+main img {
+    width: 30%;
+}
+
+main form {
+    width: 30%;
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.searchContainer img {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    height: 25px;
+    width: 25px;
+}
+
+.searchbar{
+    width: 90%;
+    border: none;
+    height: 45px;
+    border-radius: 20px;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+    padding-left: 50px;
+}
+.searchbar:focus {
+    outline: none;
+}
+
+.searchResults{
+    text-align: left;
+    margin-left: 15%;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.searchButton {
+    width: 30%;
+}
+
+.searchButton2 {
+    width: 139.22px;
+}
