@@ -115,6 +115,8 @@ body {
 }
 
 .searchResults h2 {
+    font-weight:normal;
+    font-size: large;
     margin: 5px 0px;
     color: rgb(69, 69, 243);
 }
