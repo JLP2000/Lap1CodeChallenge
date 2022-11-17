@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("express"); // install express
 const bodyParser = require("body-parser");
 const searchRoutes = require("./routes/searchResults")
 const app = express();
@@ -19,4 +19,6 @@ app.listen(port, () => {
 app.use(bodyParser.json());
 app.use("/searches", searchRoutes)
 
+
+// export app
 module.exports = app
