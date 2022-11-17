@@ -11,17 +11,25 @@ function randomNumberGenerator(){
     return Math.floor(Math.random() * (10) + 1);
 }
 
-
+function getInfoByName(search, allData) {
+    result = allData.find(data => data.name == search);
+    if(!result){
+        return;
+    }
+    return result;
+}
 
 function getRandomSearch(e){
     e.preventDefault();
-    let id = randomNumberGenerator();
-    let url = `http://localhost:3000/searches/${id}`
+    const inputValue = document.getElementById("searchInput").value;
+    // let id = randomNumberGenerator();
+    let url = `http://localhost:3000/searches`
 
     fetch(url)
     .then((res) => res.json())
     .then(data => {
-        let webLink = data.url;
+        result = getInfoByName(inputValue, data);
+        let webLink = result.url;
         window.location.replace(webLink);
     })
 }

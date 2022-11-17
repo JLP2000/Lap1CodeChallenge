@@ -3,6 +3,7 @@ const searchResults = require("../data");
 class Search{
     constructor(data){
         this.id = data.id;
+        this.name = data.name;
         this.url = data.url;
         this.title = data.title;
         this.desc = data.desc;
@@ -28,7 +29,7 @@ class Search{
     //         return;
     //     }
     //     const search = new Search(searchName);
-    //     return;
+    //     return search;
     // }
 }
 

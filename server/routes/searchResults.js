@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     try{
         const id = parseInt(req.params.id);
+        
         const searchResult = Search.findById(id);
         if(!searchResult){
             throw new Error("There is no result");
