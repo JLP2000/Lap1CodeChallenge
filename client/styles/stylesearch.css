@@ -80,6 +80,15 @@ body {
     width: 25px;
 }
 
+.searchContainer button {
+    position: absolute;
+    right: -5%;
+    top: 0px;
+    border: none;
+    height: 100%;
+    border-radius: 20px;
+}
+
 .searchbar{
     width: 90%;
     border: none;

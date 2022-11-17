@@ -42,3 +42,15 @@ function getResults(e) {
         })
     } 
 }
+
+const searchButton = document.getElementById("searchButton");
+
+searchButton.addEventListener("click", getSearchURL)
+
+function getSearchURL(e){
+    e.preventDefault();
+    console.log("hello");
+    const inputValue = document.getElementById("searchInput").value
+    localStorage.setItem("searchName", inputValue);
+    window.location.replace("search.html");
+}
