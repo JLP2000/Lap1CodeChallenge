@@ -1,6 +1,7 @@
 window.addEventListener("load", getResults)
 
 let datalength
+const searchName = localStorage.getItem("searchName")
 
 fetch("http://localhost:3000/searches")
         .then((res) => res.json())
@@ -12,6 +13,8 @@ fetch("http://localhost:3000/searches")
 
 function getResults(e) {
     e.preventDefault();
+    console.log(searchName)
+    let searchResultsNum = 1;
 
     for(let i = 1; i <= datalength; i++){
         let url = `http://localhost:3000/searches/${i}`
@@ -19,19 +22,23 @@ function getResults(e) {
         fetch(url)
         .then((res) => res.json())
         .then(data => {
-            
-            let searchResult = document.getElementById(`${i}`);
-            let a = searchResult.querySelector("a")
-            let h2 = searchResult.querySelector("h2")
-            let h2a = h2.querySelector("a")
-            let p = searchResult.querySelector("p")
 
-            a.textContent = data.url;
-            a.setAttribute("href", data.url);
-            h2a.textContent = data.title;
-            h2a.setAttribute("href", data.url);
-            p.textContent = data.desc;
+            if(data.name == searchName){
+                let searchResult = document.getElementById(`${searchResultsNum}`);
+                let a = searchResult.querySelector("a")
+                let h2 = searchResult.querySelector("h2")
+                let h2a = h2.querySelector("a")
+                let p = searchResult.querySelector("p")
 
+                a.textContent = data.url;
+                a.setAttribute("href", data.url);
+                h2a.textContent = data.title;
+                h2a.setAttribute("href", data.url);
+                p.textContent = data.desc;
+
+                searchResultsNum++;
+            }
+            else return;
         })
-    }
+    } 
 }

@@ -23,14 +23,14 @@ class Search{
         return search;
     }
 
-    // static findByName(name){
-    //     const searchName = searchResults.filter((searches) => searches.name === name)[0]
-    //     if(!searchName){
-    //         return;
-    //     }
-    //     const search = new Search(searchName);
-    //     return search;
-    // }
+    static findByName(name){
+        const searchName = searchResults.filter((searches) => searches.name === name)[0]
+        if(!searchName){
+            return;
+        }
+        const search = new Search(searchName);
+        return search;
+    }
 }
 
 module.exports = Search;

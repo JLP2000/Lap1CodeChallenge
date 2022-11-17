@@ -1,9 +1,19 @@
 window.addEventListener("load", getResults)
 
+let datalength
+
+// fetch("http://localhost:3000/searches")
+//         .then((res) => res.json())
+//         .then(data => {
+//             console.log(data.length)
+//             datalength = data.length;
+//         })
+
+
 function getResults(e) {
     e.preventDefault();
 
-    for(let i = 1; i <= 10; i++){
+    for(let i = 1; i <=13; i++){
         let url = `http://localhost:3000/searches/${i}`
 
         fetch(url)

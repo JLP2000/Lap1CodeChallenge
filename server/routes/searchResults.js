@@ -26,4 +26,20 @@ router.get('/:id', (req, res) => {
     }
 })
 
+router.get("/name/:name", (req, res) => {
+    try{
+        const name = req.params.name;
+        const searchResult = Search.findByName(name);
+        if(!searchResult){
+            throw new Error("There is no result");
+        }
+        else{
+            res.send(searchResult);
+        }
+    } catch (err){
+        console.log(err);
+        res.status(404).send({message: err.message});
+    }
+})
+
 module.exports = router;
