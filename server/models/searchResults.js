@@ -3,6 +3,7 @@ const searchResults = require("../data");
 class Search{
     constructor(data){
         this.id = data.id;
+        this.name = data.name;
         this.url = data.url;
         this.title = data.title;
         this.desc = data.desc;
@@ -19,6 +20,15 @@ class Search{
             return;
         }
         const search = new Search(searchID);
+        return search;
+    }
+
+    static findByName(name){
+        const searchName = searchResults.filter((searches) => searches.name === name)[0]
+        if(!name){
+            return;
+        }
+        const search = new Search(searchName)
         return search;
     }
 }
