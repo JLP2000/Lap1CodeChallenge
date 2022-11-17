@@ -1,9 +1,17 @@
-const buttonOne = document.getElementById("ten")
-addEventListener("submit", getRandomSearch)
+const buttonTen = document.getElementById("ten");
+buttonTen.addEventListener("click", () => {
+    window.location.replace("allSearches.html");
+});
+
+
+const buttonOne = document.getElementById("one");
+buttonOne.addEventListener("click", getRandomSearch)
 
 function randomNumberGenerator(){
-    return Math.floor(Math.random() * (10 - 1 + 1) + 1);
+    return Math.floor(Math.random() * (10) + 1);
 }
+
+
 
 function getRandomSearch(e){
     e.preventDefault();

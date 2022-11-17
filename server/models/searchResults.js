@@ -15,12 +15,21 @@ class Search{
 
     static findById(id){
         const searchID = searchResults.filter((searches) => searches.id === id)[0]
-        if(!id){
+        if(!searchID){
             return;
         }
         const search = new Search(searchID);
         return search;
     }
+
+    // static findByName(name){
+    //     const searchName = searchResults.filter((searches) => searches.name === name)[0]
+    //     if(!searchName){
+    //         return;
+    //     }
+    //     const search = new Search(searchName);
+    //     return;
+    // }
 }
 
 module.exports = Search;
